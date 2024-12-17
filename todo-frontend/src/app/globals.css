@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.light {
+  --background: 255, 255, 254;
+  --headline: 9, 64, 103;
+  --button: 61, 169, 252;
+  --text: 95, 108, 123;
+  --secondary: 144, 185, 26;
+  --shadow: 0, 0, 0;
+  --sidebar: 229, 228, 226;
+  --border: 0, 0, 0
+}
+
+.dark {
+  --background: 22, 22, 26;
+  --headline: 255, 255, 254;
+  --button: 127, 90, 240;
+  --text: 148, 161, 178;
+  --secondary: 114, 117, 126;
+  --shadow: 255, 255, 254;
+  --sidebar: 0, 0, 0;
+  --border: 255, 255, 255;
+
+}
