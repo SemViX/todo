@@ -2,7 +2,7 @@
 import Container from '@/components/container'
 import TaskBlock from '@/components/taskBlock'
 import { useCompleteTask } from '@/hooks/useCompleteTask'
-import { ITask } from '@/utils/types'
+import { ITaskBlockProps } from '@/types/taskBlock'
 import { useSession } from 'next-auth/react'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -11,7 +11,7 @@ const Completed = () => {
   const session = useSession()
   const {data, isLoading, refetch} = useCompleteTask(session.data?.user.email ?? '')
   const {t} = useTranslation()
-  
+  console.log(data)
   useEffect(() => {refetch()}, [data])
   
   return (
@@ -19,7 +19,7 @@ const Completed = () => {
       {isLoading? t('loading') :
         <div className='flex flex-col gap-2 w-full'>
         {
-          data?.data.map((item:ITask) => (
+          data?.data.map((item:ITaskBlockProps) => (
             <TaskBlock 
               key={item.documentId} 
               documentId={item.documentId} 

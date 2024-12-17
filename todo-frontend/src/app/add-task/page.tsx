@@ -1,7 +1,7 @@
 'use client'
 import Container from '@/components/container'
 import { useAddTask } from '@/hooks/useTask'
-import { IInputTask } from '@/utils/types'
+import { IInputTask } from '@/types/inputTask'
 import { useSession } from 'next-auth/react'
 import React from 'react'
 import { useForm } from 'react-hook-form'

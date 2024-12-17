@@ -2,8 +2,8 @@
 import Container from '@/components/container'
 import TaskBlock from '@/components/taskBlock'
 import { useTask } from '@/hooks/useTask'
+import { ITaskBlockProps } from '@/types/taskBlock'
 import { ROUTES } from '@/utils/routes'
-import { ITask } from '@/utils/types'
 import { NotebookPen } from 'lucide-react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
@@ -32,7 +32,7 @@ const Tasks = () => {
       {isLoading? t('loading') :
         <div className='flex flex-col gap-2 w-full'>
           {
-            data?.data.map((item:ITask) => (
+            data?.data.map((item:ITaskBlockProps) => (
               <TaskBlock 
                 key={item.documentId} 
                 documentId={item.documentId} 

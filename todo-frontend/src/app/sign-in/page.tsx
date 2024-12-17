@@ -1,7 +1,7 @@
 'use client'
 import Container from '@/components/container'
+import { ISingInInput } from '@/types/singInInput'
 import { ROUTES } from '@/utils/routes'
-import { ISingInInput} from '@/utils/types'
 import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'

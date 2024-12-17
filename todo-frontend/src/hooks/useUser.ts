@@ -1,9 +1,10 @@
+import { IUserInput } from "@/types/userInput"
 import { ROUTES } from "@/utils/routes"
-import { IError, IUserInput } from "@/utils/types"
 import { MAIN_URL } from "@/utils/urls"
 import { useMutation } from "@tanstack/react-query"
 import axios from "axios"
 import { useRouter } from "next/navigation"
+import {IError} from '@/types/error'
 
 export const useCreateUser = () => {
     const {push} = useRouter()

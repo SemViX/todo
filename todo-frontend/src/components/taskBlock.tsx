@@ -6,9 +6,9 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from "framer-motion";
 import { useChangeTaskState, useDeleteTask } from '@/hooks/useTask'
-import { ITask } from '@/utils/types'
+import { ITaskBlockProps } from '@/types/taskBlock'
 
-const TaskBlock = ({documentId, title, text, photo, deadline, is_completed}:ITask) => {
+const TaskBlock = ({documentId, title, text, photo, deadline, is_completed}:ITaskBlockProps) => {
 
 
   const {t} = useTranslation()

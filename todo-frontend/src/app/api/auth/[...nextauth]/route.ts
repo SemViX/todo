@@ -1,5 +1,5 @@
+import { IUserResponse } from "@/types/userResponse";
 import { ROUTES } from "@/utils/routes";
-import { UserResponse } from "@/utils/types";
 import { MAIN_URL } from "@/utils/urls";
 import axios from "axios";
 import { NextAuthOptions } from "next-auth";
@@ -26,7 +26,7 @@ export const authOptions: NextAuthOptions = {
                     return null
                 }
 
-                const res = await axios.post<UserResponse>(`${MAIN_URL}auth/local`, {
+                const res = await axios.post<IUserResponse>(`${MAIN_URL}auth/local`, {
                     identifier: credentials.email,
                     password: credentials.password
                 });
